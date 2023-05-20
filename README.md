@@ -68,7 +68,7 @@ Computes softmax cross-entropy loss given the raw scores from the network.
 * sgd.py*
 An optimizer is used to update weights of models. In practice, it is common to use a momentum term in SGD for better convergence. Specifically, we introduce a new velocity term vt and the update rule is as follows:
 
-v<sub>t = βv<sub>t-1 -  η\frac{\partial L}{\partial w} \div \frac{\partial w}{\partial w}
+v<sub>t = βv<sub>t-1 -  η \frac{\partial L}{\partial w}
 
 
 
