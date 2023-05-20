@@ -73,5 +73,5 @@ v _t  = βv _{t-1}  -  η \frac{\partial L}{\partial w}
 ```math
 w = w + v_t
 ```
-
+where β denotes the momentum coefficient and η denotes the learning rate
 
