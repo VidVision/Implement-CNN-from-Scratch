@@ -18,18 +18,28 @@ $ conda env create -f environment.yaml
 
 -**./train.py**
 To run the model, simply run 
+
 $ python train.py
 
 ## Data Loading ##
 - **./data**
+- 
 Download the CIFAR dataset with  provided script under ./data by:
+
 $ cd data
+
 $ sh get_data . sh
+
 $ cd . . /
+
 Microsoft Windows 10 Only
+
 C: \ c o de  folder > cd data
+
 C: \ c o de  folder \ data> get_data . bat
+
 C: \ c o de  folder \ data> cd . .
+
 The dataset is already downloaded so this step can be skipped.
 
 
@@ -37,33 +47,44 @@ The dataset is already downloaded so this step can be skipped.
 This code reads the data batches in the data folder, and creates training, validation and testing X and Ys. 
 
 ## Model Implementation ##
+
 -**./trainer.py**
+
 The code optimizes the parameters of a model to minimize a loss function. We use training data X and y to compute the loss and gradients, and periodically check the accuracy on the validation set.
 
 -**./modules/conv_classifier**
+
 Ties each of the modules together to complete a CNN network. The network is constructed by a list of module definitions *in order* and handles both forward and backward communication between modules.
 Typically, a convolutional neural network is composed of several different modules and these modules work together to make the network effective. For each module shown below, I have implemented a forward pass (computing forwarding results) and a backward
 pass (computing gradients). These modules are the building block of *./modules/conv_classifier*.
 
 1. **./modules/convolution.py**
+2. 
 The module for 2D Convolution, forward and backward implementation.
 
 2. **./modules/relu.py**
+3. 
 The code for rectified linear units(ReLU) module, forward and backward implementation.
 
 3. **./modules/max_pool.py**
+4. 
 The code for Max pooling module, forward and backward implementation.
 
 4. **./modules/linear.py**
+5. 
 The code for Linear module, forward and backward implementation.
 
 5. **./modules/softmax_ce.py**
+6. 
 The code for Softmax Cross Entropy module, forward and backward implementation. 
 Computes softmax cross-entropy loss given the raw scores from the network.
 
 ## Optimizer ##
+
 - **./optimizer**
+- 
 * _base_optimizer.py*  : 
+* 
  Apply L2 penalty to the model. Update the gradient dictionary in the model
  
 * sgd.py*
