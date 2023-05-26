@@ -13,6 +13,7 @@ Python 3 is used in this project.
 
 - **environment.yaml**
 Contains a list of needed libraries. 
+
 $ conda env create -f environment.yaml
 
 -**./train.py**
